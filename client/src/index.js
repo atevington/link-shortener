@@ -6,7 +6,9 @@ import "typeface-roboto";
 
 // hack to see if this is running locally or not
 const apiBaseUrl =
-  window.location.hostname === "localhost" ? "http://localhost:3001/" : "/";
+  window.location.hostname === "localhost"
+    ? "http://localhost:3001/"
+    : `${window.location.protocol}//${window.location.host}/`;
 
 const apiClient = axios.create({ baseURL: apiBaseUrl });
 
